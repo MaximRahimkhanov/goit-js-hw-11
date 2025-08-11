@@ -1,8 +1,8 @@
-// 📦 Імпорт бібліотек
+
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
-// 📦 Імпорт функцій
+
 import { getImagesByQuery } from './js/pixabay-api.js';
 import {
   createGallery,
@@ -12,11 +12,11 @@ import {
 } from './js/render-functions.js';
 
 
-// 📌 DOM-елементи
+
 const formEl = document.querySelector('.form');
 const inputEl = document.querySelector('.form-input');
 
-// 🧠 Основна логіка
+
 formEl.addEventListener('submit', async (e) => {
   e.preventDefault();
 
