@@ -2,6 +2,8 @@ import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
 const galleryContainer = document.querySelector('.gallery');
+
+
 const lightbox = new SimpleLightbox('.gallery a');
 
 function templateImage(img) {
@@ -18,18 +20,12 @@ function templateImage(img) {
   `;
 }
 
-
 export function createGallery(images) {
   const markup = images.map(templateImage).join('');
   galleryContainer.innerHTML = markup;
 
-  if (!lightbox) {
-    lightbox = new SimpleLightbox('.gallery a');
-  } else {
-    lightbox.refresh();
-  }
+  lightbox.refresh();
 }
-
 
 export function clearGallery() {
   galleryContainer.innerHTML = '';
